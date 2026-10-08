@@ -3,9 +3,9 @@ spring:
     name: ledgerly-backend
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/ledgerly
-    username: postgres
-    password: Soytsh4321@
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/ledgerly}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
 
   jpa:
     hibernate:
@@ -14,8 +14,4 @@ spring:
     open-in-view: false
 
 server:
-  port: 8080
-
-logging:
-  level:
-    org.springframework.security: DEBUG
+  port: ${PORT:8080}
