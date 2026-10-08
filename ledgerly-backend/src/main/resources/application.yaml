@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: ledgerly-backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ledgerly
+    username: postgres
+    password: Soytsh4321@
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.security: DEBUG
