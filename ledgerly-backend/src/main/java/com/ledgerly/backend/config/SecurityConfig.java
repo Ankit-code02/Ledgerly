@@ -37,7 +37,7 @@ public class SecurityConfig {
 
         configuration.setAllowedOrigins(List.of(
                 "http://localhost:3000",
-                "https://ledgerly-lyart-two.vercel.app"
+                "https://ledgerly-ocnx3fgwy-ankit-8772.vercel.app"
         ));
 
         configuration.setAllowedMethods(
