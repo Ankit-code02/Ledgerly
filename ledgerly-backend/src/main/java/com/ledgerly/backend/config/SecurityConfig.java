@@ -73,9 +73,9 @@ public class SecurityConfig {
     ) throws Exception {
 
         http
-                .cors(cors -> {})
+                http
+        .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .csrf(AbstractHttpConfigurer::disable)
-
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
                                 "/api/users",
@@ -83,7 +83,6 @@ public class SecurityConfig {
                         ).permitAll()
                         .anyRequest().authenticated()
                 )
-
                 .addFilterBefore(
                         jwtAuthenticationFilter,
                         UsernamePasswordAuthenticationFilter.class
